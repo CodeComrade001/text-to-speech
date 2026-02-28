@@ -29,11 +29,12 @@ A minimal REST API built with **Express.js** and **TypeScript** that converts te
 
 ```bash
 # 1. Clone the repository
-git clone <your-repo-url>
-cd <your-repo-name>
+git clone https://github.com/CodeComrade001/text-to-speech.git
+cd text-to-speech
 
 # 2. Install dependencies
 npm install
+npm run dev
 ```
 
 ---
@@ -121,7 +122,7 @@ Content-Disposition: attachment; filename=speech.wav
 #### Example with `curl`
 
 ```bash
-curl -X POST http://localhost:3000/api/tts \
+curl -X POST http://localhost:3000/api/upload-text \
   -H "Content-Type: application/json" \
   -d '{"text": "Hello from the TTS API!", "voice": "aoede", "pitch": 0}' \
   --output speech.wav
